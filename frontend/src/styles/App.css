@@ -1,0 +1,82 @@
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bree Serif", serif;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 0.05em;
+}
+
+.app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    position: relative;
+    background-image: url('C:/Users/Harish/OneDrive/Desktop/DL Project/frontend/src/sources/bg.jpg'); 
+    background-size: cover; 
+    background-position: center -300px;
+    overflow: hidden;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 20px; 
+}
+
+p {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #03346E;
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.button-group button {
+    padding: 12px 25px; 
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    outline: none;
+}
+
+.login-btn {
+    background-color: #3282B8;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signup-btn {
+    background-color: #79A8A9;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-btn:hover {
+    background-color: #0f5f8e;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.signup-btn:hover {
+    background-color:#308b8d;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+}
