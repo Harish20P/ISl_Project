@@ -1,0 +1,186 @@
+/* Header Container */  
+.main-header {  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    padding: 10px 20px;  
+    background-color: rgba(254, 246, 236, 0.6);  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  
+    position: fixed;  
+    top: 20px;  
+    left: 40px;  
+    width: 95%;  
+    z-index: 1000;  
+    border-radius: 50px;  
+    transition: all 0.3s ease; /* Added transition for smooth resizing */  
+}  
+
+/* Logo Styling */  
+.logo img {  
+    height: 45px;  
+    background-color: transparent;  
+    border-radius: 50px;  
+    transition: transform 0.3s ease;  
+}  
+.logo img:hover {  
+    transform: scale(1.5);  
+}  
+
+/* Navigation Links */  
+.nav-links {  
+    display: flex;  
+    gap: 55px;  
+    margin-left: 110px;  
+}  
+.nav-link {  
+    font-size: 1.5rem;  
+    color: #343a40;  
+    text-decoration: none;  
+    font-weight: 500;  
+    transition: color 0.3s ease;  
+}  
+.nav-link:hover {  
+    color: #D10363;  
+    text-decoration: underline;  
+}  
+
+/* Sign-Out Button */  
+.signout-container {  
+    display: flex;  
+    align-items: center;  
+}  
+.signout-button {  
+    padding: 10px 20px;  
+    background-color: #D10363;  
+    color: white;  
+    border-radius: 50px;  
+    text-decoration: none;  
+    font-size: 1.1rem;  
+    font-weight: 500;  
+    transition: background-color 0.3s ease, transform 0.4s ease;  
+}  
+.signout-button:hover {  
+    background-color: #135D66;  
+    transform: scale(1.05);  
+}  
+
+/* Responsive Styles */  
+@media (max-width: 1200px) {  
+    .nav-links {  
+        gap: 30px;  
+        margin-left: 50px;  
+    }  
+
+    .nav-link {  
+        font-size: 1.3rem;  
+    }  
+
+    .signout-button {  
+        font-size: 1rem;  
+    }  
+}  
+
+@media (max-width: 992px) {  
+    .main-header {  
+        padding: 7px;  
+        left: 10px;  
+        top: 10px;  
+        width: 95%;  
+        flex-direction: row;  
+        align-items: center;  
+    }  
+
+    .nav-links {  
+        flex-direction: row;  
+        gap: 10px;  
+        margin-left: 100px;  
+    }  
+
+    .nav-link {  
+        font-size: 1rem;  
+        padding: 5px 0;  
+    }  
+
+    .signout-container {  
+        margin-top: 10px;  
+    }  
+
+    .signout-button {  
+        padding: 8px 15px;  
+        font-size: 0.9rem;  
+        width: 100%;   
+        text-align: center;  
+        margin-top: -10px;  
+    }    
+}  
+
+@media (max-width: 768px) {  
+    .main-header {  
+        padding: 7px;  
+        left: 10px;  
+        top: 10px;  
+        width: 95%;  
+        flex-direction: row;  
+        align-items: center;  
+    }  
+
+    .nav-links {  
+        flex-direction: row;  
+        gap: 10px;  
+        margin-left: 100px;  
+    }  
+
+    .nav-link {  
+        font-size: 1rem;  
+        padding: 5px 0;  
+    }  
+
+    .signout-container {  
+        margin-top: 10px;  
+    }  
+
+    .signout-button {  
+        padding: 8px 15px;  
+        font-size: 0.9rem;  
+        width: 100%;   
+        text-align: center;  
+        margin-top: -10px;  
+    }  
+}
+
+@media (max-width: 575px) {  
+    .nav-links {  
+        flex-direction: row;  
+        gap: 10px;  
+        margin: auto;  
+    }  
+
+    .signout-container {  
+        margin-top: 15px;  
+    }  
+
+    .signout-button {  
+        padding: 8px 15px;  
+        font-size: 0.9rem;  
+        width: 100%;   
+        text-align: center;  
+        margin-top: -10px;  
+    }  
+
+    .logo img {  
+        height: 35px;  
+    }  
+
+    .nav-link {  
+        font-size: 1rem;  
+    }  
+
+    .signout-button {  
+        font-size: 0.8rem;  
+    }  
+
+    .main-header {  
+        flex-direction: column;  
+        align-items: center;  
+    }     
+}

@@ -1,0 +1,118 @@
+.contact-page {
+    padding: 0 20px 20px 20px;
+    height: calc(100vh - 110px);
+    overflow-y: auto; /* Change to auto for scroll functionality */
+    scrollbar-width: none; 
+    margin-top: 70px;
+}
+
+.contact-page::-webkit-scrollbar {
+    display: none;
+}
+
+.fixed-header {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px; 
+    background-color: #343a40; 
+    color: white;
+    z-index: 1000; 
+}
+
+.contact-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjusts to space out left and right sections */
+    padding: 20px;
+    background-color: rgba(254, 246, 236, 0.8);
+    margin: 20px auto; /* Adjust margin for spacing between sections */
+    border-radius: 10px;
+    width: 70%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Adds a shadow for better separation */
+}
+
+.left {
+    flex: 1;
+    padding: 20px;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.right img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 45% 5px 45%;
+}
+
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+}
+
+.contact-section p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+}
+
+.contact-section:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        width: 90%; /* Increase width for smaller screens */
+        margin: 10px auto; /* Adjust margin for spacing */
+    }
+
+    .left {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .right {
+        justify-content: center;
+        margin-top: 20px; /* Add spacing above the image */
+    }
+
+    .contact-section h2 {
+        font-size: 1.8em; /* Adjust font size */
+    }
+
+    .contact-section p {
+        font-size: 1em; /* Adjust font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        width: 95%; /* Further increase width for mobile screens */
+        margin-bottom: 25px;
+    }
+    
+    .contact-section:first-child {
+        margin-top: 70px;
+    }
+
+    .contact-section h2 {
+        font-size: 1.5em; /* Further reduce font size */
+    }
+
+    .contact-section p {
+        font-size: 0.9em; /* Further reduce font size */
+    }
+
+    .right img {
+        max-width: 100%; /* Ensure image takes full width */
+    }
+}

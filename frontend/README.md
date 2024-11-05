@@ -1,3 +1,38 @@
+# ISL Conversion Project
+
+## Overview
+The ISL Conversion Project is a web application designed to facilitate the conversion between Indian Sign Language (ISL) and text/audio formats. This application provides various features, including:
+
+- **Audio to ISL Conversion**: Convert spoken audio into ISL signs.
+- **Text to ISL Conversion**: Convert written text into ISL signs.
+- **ISL to Text Conversion**: Convert ISL signs back into written text.
+
+The main goal of this project is to bridge the communication gap between the hearing and hearing-impaired communities by making it easier for users to understand and use Indian Sign Language.
+
+## Features
+- User-friendly interface for seamless navigation.
+- Multiple conversion options: audio, text, and ISL.
+- Authentication system to manage user sessions.
+- Responsive design for mobile and desktop devices.
+
+## Getting Started
+
+### Prerequisites
+- Node.js (v14 or higher)
+- npm (Node Package Manager)
+- React Router (for routing)
+
+### Installation
+
+1. **Clone the Repository**
+
+   Open your terminal and clone the repository to your local machine:
+
+   ```bash
+   git clone https://github.com/yourusername/isl-conversion.git
+   cd isl-conversion
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

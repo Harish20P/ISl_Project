@@ -1,0 +1,182 @@
+/* Updated header title margin */  
+.video-title {  
+    font-size: 24px;  
+    color: #ff9800;  
+    margin-top: 85px;  
+}  
+
+.video-container {  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+    justify-content: center;  
+    font-family: Arial, sans-serif;  
+    background-color: rgba(76, 75, 74, 0.568);  
+    color: #ffffff;  
+    text-align: center;  
+    width: 1000px;  
+    height: 73vh;    
+    margin: 0 auto;  
+    margin-top: -10px;  
+    margin-bottom: 8px;  
+    padding: 20px;  
+    overflow-y: scroll;  
+    scrollbar-width: none;   
+}  
+
+.video-container::-webkit-scrollbar {  
+    display: none;  
+}  
+
+.video-display {  
+    max-height: 800px;  
+    border-radius: 5px;  
+    padding: 10px;  
+    width: 100%; /* Changed to 100% for responsiveness */  
+    max-width: 800px; /* Keep maximum width */  
+    margin-bottom: 20px;  
+}  
+
+.video-preview {  
+    max-width: 100%;  
+    border-radius: 5px;  
+}  
+
+.video-text-output {  
+    width: 100%;  
+    margin-bottom: 20px;  
+}  
+
+.video-output-text-content {  
+    background-color: #333;  
+    color: #ffffff;  
+    padding: 10px;  
+    border-radius: 5px;  
+    max-width: 100%;  
+    font-size: 16px;  
+    overflow-wrap: break-word;  
+}  
+
+.upload-controls {  
+    display: flex;  
+    flex-direction: row;  
+    align-items: center;  
+    gap: 10px;  
+    justify-content: center; /* Center the controls */  
+    margin-left: 0; /* Remove margin-left for responsiveness */  
+    margin-right: 0; /* Remove margin-right for responsiveness */  
+}  
+
+.upload-controls input[type="file"] {  
+    display: none;  
+}  
+
+.upload-label {  
+    background-color: #ff9800;  
+    color: #ffffff;  
+    padding: 8px 13px;  
+    border-radius: 5px;  
+    cursor: pointer;  
+    transition: background-color 0.3s;  
+}  
+
+.upload-label:hover {  
+    background-color: #e68900;  
+}  
+
+.process-button {  
+    background-color: #ff9800;  
+    color: #ffffff;  
+    padding: 8px 13px;  
+    border: none;  
+    border-radius: 5px;  
+    cursor: pointer;  
+    transition: background-color 0.3s;
+    font-size: 1rem;  
+}  
+
+.process-button:disabled {  
+    background-color: #aaa;  
+    cursor: not-allowed;  
+}  
+
+.process-button:hover:enabled {  
+    background-color: #e68900;  
+}  
+
+
+.video-container{
+    width: 1000px;
+    height: 70vh;
+}
+  
+@media (max-width: 768px) {  
+    .video-title {  
+        font-size: 20px;
+        margin-top: 50px; 
+    }  
+
+    .video-container{
+        height: 60vh;
+        width: 600px;
+    }
+
+    .upload-controls {  
+        flex-direction: column; /* Stack controls on smaller screens */  
+        align-items: center;  
+        margin-left: 0;  
+    }  
+
+    .process-button, .upload-label {  
+        width: 100%; /* Make buttons full width */  
+        text-align: center; /* Center text for buttons */  
+    }  
+
+    .video-display {  
+        width: 90%; /* Make the video display full width with some padding */  
+    }  
+
+    .video-container {  
+        padding: 10px; /* Reduce padding for smaller screens */  
+    }  
+}  
+
+@media (max-width: 575px){
+    .video-title {  
+        font-size: 18px;
+        margin-top: 130px; /* Further reduce font size for small screens */  
+    }  
+
+    .video-container{
+        height:55vh;
+        width: 500px;
+    }
+
+    .process-button {  
+        padding: 8px 10px; /* Adjust button padding */  
+    }  
+
+    .upload-label {  
+        padding: 6px 10px; 
+    }/* Adjust label padding */  
+}
+
+@media (max-width: 480px) {  
+    .video-title {  
+        font-size: 18px;
+        margin-top: 120px; /* Further reduce font size for small screens */  
+    }  
+
+    .video-container{
+        height: 50vh;
+        width: 300px;
+    }
+
+    .process-button {  
+        padding: 8px 10px; /* Adjust button padding */  
+    }  
+
+    .upload-label {  
+        padding: 6px 10px; /* Adjust label padding */  
+    }  
+}
