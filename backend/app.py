@@ -5,9 +5,31 @@ from flask_cors import CORS
 from flask_session import Session
 from pymongo import MongoClient
 from werkzeug.security import generate_password_hash, check_password_hash
+import speech_recognition as sr
+from pydub import AudioSegment
+
+def audio_to_text(audio_file):
+    recognizer = sr.Recognizer()
+
+    if audio_file.endswith(".mp3"):
+        audio = AudioSegment.from_mp3(audio_file)
+        audio_file = "temp.wav"
+        audio.export(audio_file, format="wav")
+
+    with sr.AudioFile(audio_file) as source:
+        audio_data = recognizer.record(source) 
+
+    try:
+        text = recognizer.recognize_google(audio_data)
+        print("Extracted Text:", text)  # Display extracted text in terminal
+        return text
+    except sr.RequestError as e:
+        raise Exception(f"Could not request results from Google Speech Recognition service; {e}")
+    except sr.UnknownValueError:
+        raise Exception("Google Speech Recognition could not understand the audio")
 
 app = Flask(__name__, static_folder='../frontend/build', static_url_path='/')
-CORS(app)
+CORS(app)  # Allow requests from any origin
 
 app.secret_key = os.getenv("SECRET_KEY", "your_secret_key")  # Use a strong secret key in production
 app.config['SESSION_TYPE'] = 'filesystem'
@@ -24,7 +46,6 @@ users_collection = db['User']
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def serve(path):
-    # If path points to a file in static folder, serve it, else serve index.html for React Router
     if path != "" and os.path.exists(os.path.join(app.static_folder, path)):
         return send_from_directory(app.static_folder, path)
     else:
@@ -76,47 +97,35 @@ def logout():
     session.pop('user_id', None)
     return jsonify({'message': 'Logout successful!'}), 200
 
-# API endpoint to process text input and generate a video (mock function)
-@app.route('/api/process-text', methods=['POST'])
-def process_text():
-    data = request.get_json()
-    text = data.get("text")
-        
-    # Placeholder function to simulate video generation
-    video_path = generate_video_from_text(text)
-    video_url = url_for('serve_video', filename=os.path.basename(video_path), _external=True)
-        
-    return jsonify({"videoURL": video_url})
+@app.route('/audio/<filename>')
+def serve_audio(filename):
+    return send_from_directory(os.path.join('audio'), filename, mimetype='audio/mpeg')
 
-@app.route('/videos/<filename>')
-def serve_video(filename):
-    return send_from_directory('videos', filename, mimetype='video/mp4')
-
-def generate_video_from_text(text):
-    output_path = os.path.join('videos', 'output_video.mp4')
-    # This is a placeholder. Insert actual video generation code here.
-    return output_path
-
-# API endpoint to process audio input (mock function)
 @app.route('/api/process-audio', methods=['POST'])
 def process_audio():
     if 'audio' not in request.files:
         return jsonify({"message": "No audio file uploaded"}), 400
 
     audio_file = request.files['audio']
-    audio_path = os.path.join("uploads", audio_file.filename)
+    audio_folder = "audio"
+    if not os.path.exists(audio_folder):
+        os.makedirs(audio_folder)
+
+    audio_path = os.path.join(audio_folder, audio_file.filename)
     audio_file.save(audio_path)
 
-    # Call your ML model here to process the audio file
-    # Replace the following with actual model processing
-    processed_text = "This is a mock processed text from the audio."  # Mock response
+    try:
+        processed_text = audio_to_text(audio_path)
+        audio_url = url_for('serve_audio', filename=audio_file.filename, _external=True)
+        print("Extracted Text:", processed_text)
+        return jsonify({"message": processed_text, "audioURL": audio_url})
+    except Exception as e:
+        print(f"Error during audio processing: {str(e)}")  # Improved logging
+        return jsonify({"message": f"Error processing audio: {str(e)}"}), 500
 
-    return jsonify({"message": processed_text})
-
-# Start the Flask application
 if __name__ == '__main__':
-    if not os.path.exists("uploads"):
-        os.makedirs("uploads")  # Create uploads folder if it doesn't exist
+    if not os.path.exists("audio"):
+        os.makedirs("audio")
     if not os.path.exists("videos"):
-        os.makedirs("videos")  # Create videos folder if it doesn't exist
-    app.run(debug=True)
+        os.makedirs("videos")
+    app.run(debug=True, port=5000)  # Ensure it runs on port 5000
