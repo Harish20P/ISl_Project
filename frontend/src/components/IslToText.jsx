@@ -45,7 +45,7 @@ const ISLToText = () => {
   return (
     <div>
       <Header />
-      <p className="video-title">Video To ISL Converter</p>
+      <p className="video-title">Video To Text Converter</p>
       <div className="video-container">
         
         <div className="video-display">

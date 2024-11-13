@@ -1,60 +1,55 @@
-/* Updated header title margin */
 .audio-title {
     font-size: 24px;
     color: #ff9800;
-    margin-top: 85px;
+    margin-top: 60px;
+    text-align: center;
 }
 
 .audio-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     font-family: Arial, sans-serif;
     background-color: rgba(76, 75, 74, 0.568);
     color: #ffffff;
-    text-align: center;
+    text-align: left;
     width: 1000px;
-    height: 73vh;
     margin: 0 auto;
-    margin-top: -10px;
-    margin-bottom: 8px;
     padding: 20px;
-    overflow-y: scroll;
+    overflow-y: auto;
     scrollbar-width: none;
+    height: 700px;
+}
+
+.audio-display{
+    margin-left: 15px;
 }
 
 .audio-container::-webkit-scrollbar {
     display: none;
 }
 
-.audio-display {
-    max-height: 800px;
-    border-radius: 5px;
-    padding: 10px;
-    width: 100%; /* Changed to 100% for responsiveness */
-    max-width: 800px; /* Keep maximum width */
-    margin-bottom: 20px;
+.audio-display, .audio-message-output {
+    width: 100%;
+    text-align: left;
 }
 
 .audio-preview {
     max-width: 100%;
     border-radius: 5px;
-}
-
-.audio-message-output {
-    width: 100%;
     margin-bottom: 20px;
 }
 
 .output-text-content {
-    background-color: #333;
-    color: #ffffff;
     padding: 10px;
     border-radius: 5px;
-    max-width: 100%;
     font-size: 16px;
     overflow-wrap: break-word;
+    display: flex;
+    width: auto;
+}
+
+.video-container {
+    width: 100%;
+    text-align: left;
+    margin-top: 10px;
 }
 
 .upload-controls {
@@ -62,16 +57,15 @@
     flex-direction: row;
     align-items: center;
     gap: 10px;
-    justify-content: center; /* Center the controls */
-    margin-left: 0; /* Remove margin-left for responsiveness */
-    margin-right: 0; /* Remove margin-right for responsiveness */
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .upload-controls input[type="file"] {
     display: none;
 }
 
-.upload-label {
+.upload-label, .process-button {
     background-color: #ff9800;
     color: #ffffff;
     padding: 8px 13px;
@@ -80,19 +74,8 @@
     transition: background-color 0.3s;
 }
 
-.upload-label:hover {
+.upload-label:hover, .process-button:hover:enabled {
     background-color: #e68900;
-}
-
-.process-button {
-    background-color: #ff9800;
-    color: #ffffff;
-    padding: 8px 13px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: 1rem;
 }
 
 .process-button:disabled {
@@ -100,11 +83,64 @@
     cursor: not-allowed;
 }
 
-.process-button:hover:enabled {
-    background-color: #e68900;
+.history-container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-/* Media Queries for Responsiveness */
+.history-entry {
+    background-color: rgba(184, 176, 176, 0.7);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.history-entry audio,
+.history-entry video {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.history-entry p {
+    background-color: #fff;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 16px;
+    overflow-wrap: break-word;
+    width: max-content;
+}
+
+/* Responsive Styles */
+@media (max-width: 1440px) {
+    .audio-title {
+        font-size: 23px;
+        margin-top: 75px;
+        margin-bottom: 25px;
+    }
+
+    .audio-container {
+        width: 1000px;
+        height: 75vh;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .audio-display, .video-container {
+        width: 45%;
+    }
+
+    .upload-controls {
+        gap: 20px;
+    }
+
+    .process-button, .upload-label {
+        width: 20%;
+        text-align: center;
+    }
+}
 
 @media (max-width: 1024px) {
     .audio-title {
@@ -118,8 +154,8 @@
         padding: 15px;
     }
 
-    .audio-display {
-        width: 95%;
+    .audio-display, .video-container {
+        width: 45%;
     }
 
     .upload-controls {
@@ -150,11 +186,11 @@
     }
 
     .process-button, .upload-label {
-        width: 250%;
+        width: 40%;
         text-align: center;
     }
 
-    .audio-display {
+    .audio-display, .video-container {
         width: 90%;
     }
 

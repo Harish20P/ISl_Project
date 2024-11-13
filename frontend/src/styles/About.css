@@ -108,6 +108,43 @@
   margin-top: 1rem;  
 }
 
+@media (min-width: 1440px) {  
+  .about-container {  
+    padding: 1rem; 
+    margin-top: 210px;  
+    overflow-y: auto; 
+    overflow-x: hidden;
+    max-width: 1200px; 
+  }  
+
+  .project-description {  
+    gap: 10px;
+    margin-bottom: 10px;     
+  }  
+
+  .text-content {  
+    padding: 15px;  
+  }  
+
+  .conversion-section {  
+    gap: 28px;   
+    justify-content: center; 
+  }  
+
+  .conversion-block {  
+    width: calc(33% - 1rem);  
+    margin-bottom: 1.5rem;   
+  }  
+
+  .conversion-block h3 {  
+    font-size: 1.6rem;   
+  }  
+
+  .conversion-block p {  
+    font-size: 1.1rem;   
+  }  
+}
+
 /* Responsive Design for Medium and Small Screens */
 @media (max-width: 1025px) {  
   .about-container {  

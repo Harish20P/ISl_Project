@@ -79,6 +79,34 @@
     margin-bottom: -2px;
 }
 
+@media (min-width: 1440px) {  
+    .input-content {  
+        margin-top: 80px; 
+        width: 600px;
+        height: 600px;
+    }  
+
+    .input-container {  
+        gap: 20px; /* Reduce gap slightly */  
+    }  
+
+    .card {  
+        padding: 30px 30px 40px 30px; /* Adjust padding */  
+    }  
+
+    .card-title {  
+        font-size: 1.5rem; /* Slightly smaller card title */  
+    }  
+
+    .card-description {  
+        font-size: 1.2rem; /* Slightly smaller description */  
+    }  
+
+    .btn {  
+        font-size: 0.85rem; /* Smaller button font */  
+    }  
+}  
+
 /* Responsive Styles */
 @media (max-width: 1200px) {
     .input-container {
