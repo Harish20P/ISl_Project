@@ -6,6 +6,8 @@ import target from "../sources/target.png"
 import mike from "../sources/mike.png"
 import sign from "../sources/hello.png"
 import text from "../sources/text.png"
+import abc from "../sources/abc.png"
+import img1 from "../sources/image.png"
 
 const About = () => {
   return (
@@ -23,6 +25,54 @@ const About = () => {
             </section>
 
             <section className="conversion-section">
+              <div className="conversion-block text-to-alnum">
+                  <div className="conversion-icon-row">
+                      <img src={text} alt="Text icon" />
+                      <p>To</p>
+                      <img src={abc} alt="Alphabet icon" />
+                  </div>
+                  <h3>Text to Alphabets/Nums</h3>
+                  <p>
+                      Convert written text into ISL signs for individual letters and numbers, making it easier to understand text structure.
+                  </p>
+              </div>
+
+              <div className="conversion-block alnum-to-text">
+                  <div className="conversion-icon-row">
+                      <img src={abc} alt="Alphabet icon" />
+                      <p>To</p>
+                      <img src={text} alt="Text icon" />
+                  </div>
+                  <h3>Alphabets/Nums to Text</h3>
+                  <p>
+                      Translate ISL signs of alphabets and numbers back into readable text for easy interpretation.
+                  </p>
+              </div>
+
+              <div className="conversion-block text-to-img">
+                  <div className="conversion-icon-row">
+                      <img src={text} alt="Text icon" />
+                      <p>To</p>
+                      <img src={img1} alt="Img icon" />
+                  </div>
+                  <h3>Text to Image Conversion</h3>
+                  <p>
+                      Transform written text into related images for better visualization of content.
+                  </p>
+              </div>
+
+              <div className="conversion-block img-to-text">
+                  <div className="conversion-icon-row">
+                      <img src={img1} alt="Img icon" />
+                      <p>To</p>
+                      <img src={text} alt="Text icon" />
+                  </div>
+                  <h3>Image to Text Conversion</h3>
+                  <p>
+                      Convert images into descriptive text for a clearer understanding of visual content.
+                  </p>
+              </div>
+
               <div className="conversion-block audio-to-isl">
                   <div className="conversion-icon-row">
                       <img src={mike} alt="Mike icon" />
@@ -42,7 +92,7 @@ const About = () => {
                       <p>To</p>
                       <img src={sign} alt="Sign icon" />
                   </div>
-                  <h3>Text to ISL Conversion</h3>
+                  <h3>Text to ISL <br></br> Conversion</h3>
                   <p>
                       Users can enter written text and see it converted into ISL signs. This feature
                       aims to make communication seamless for users who prefer written inputs.
@@ -55,7 +105,7 @@ const About = () => {
                       <p >To</p>
                       <img src={text} alt="Text icon" />
                   </div>
-                  <h3>ISL to Text Conversion</h3>
+                  <h3>ISL to Text <br></br> Conversion</h3>
                   <p>
                       This feature allows users to convert ISL signs back into written text, making
                       it easy for those unfamiliar with ISL to understand sign language communication.

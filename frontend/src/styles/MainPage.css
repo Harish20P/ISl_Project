@@ -1,12 +1,22 @@
 .input-content {
-    margin-top: 90px;
     text-align: center;
+}
+
+.Scroll{
+    color: #D10363;
 }
 
 .input-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    max-height: 590px; 
+    overflow-y: auto; 
+    scrollbar-width: none; 
+}
+
+.input-container::-webkit-scrollbar {
+    display: none; 
 }
 
 .card {
@@ -79,9 +89,22 @@
     margin-bottom: -2px;
 }
 
+.bi-sort-alpha-up{
+    margin-bottom: -6.5px;
+}
+
+.bi-sort-alpha-up1{
+    margin-bottom: -6.5px;
+    margin-left: 8px;
+}
+
+.bi-images{
+    margin-left: 10px;
+}
+
 @media (min-width: 1440px) {  
     .input-content {  
-        margin-top: 80px; 
+        margin-top: 40px; 
         width: 600px;
         height: 600px;
     }  

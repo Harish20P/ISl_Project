@@ -3,9 +3,8 @@
   margin: 3.5rem auto;  
   padding: 1rem;   
   font-family: 'Arial', sans-serif;  
-  border-radius: 10px;  
-  margin-top:45px;  
-  height: calc(100vh - 200px); /* Adjust the height as needed */
+  border-radius: 10px;   
+  height: calc(100vh - 180px); /* Adjust the height as needed */
   -ms-overflow-style: none;  /* Hide scrollbar for Internet Explorer and Edge */
   scrollbar-width: none;  /* Hide scrollbar for Firefox */
 }  
@@ -111,7 +110,7 @@
 @media (min-width: 1440px) {  
   .about-container {  
     padding: 1rem; 
-    margin-top: 210px;  
+    margin-top: 120px;  
     overflow-y: auto; 
     overflow-x: hidden;
     max-width: 1200px; 
@@ -119,7 +118,8 @@
 
   .project-description {  
     gap: 10px;
-    margin-bottom: 10px;     
+    margin-bottom: 10px;
+    margin-top: -10px;     
   }  
 
   .text-content {  
