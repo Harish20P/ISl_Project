@@ -8,6 +8,10 @@ import ISLToText from './IslToText';
 import About from './About';
 import Contact from './Contact';
 import AudioToISL from "./AudioToIsl";
+import TextToAlnum from './TextToAlnum';
+import TextToWord from './TextToWord';
+import AlnumToText from './AlnumToText';
+import WordToText from './WordToText';
 import '../styles/App.css'; 
 
 function App() {
@@ -39,7 +43,11 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/main" element={<MainPage />} />
+          <Route path="/text-to-alnum" element={<TextToAlnum />} />
+          <Route path="/text-to-word" element={<TextToWord />} />
           <Route path="/audio-to-isl" element={<AudioToISL />} />
+          <Route path="/alnum-to-text" element={<AlnumToText />} />
+          <Route path="/word-to-text" element={<WordToText />} />
           <Route path="/text-to-isl" element={<TextToISL />} />
           <Route path="/isl-to-text" element={<ISLToText />} />
           <Route path="/about" element={<About />} />

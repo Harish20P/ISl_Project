@@ -27,7 +27,7 @@ const MainPage = () => {
                             </svg>
                         </h2>
                         <p className="card-description">Convert Text to Alphabets/Nums</p>
-                        <Link to="/isl-to-text" className="btn">Start Text to A-Z/0-9</Link>
+                        <Link to="/text-to-alnum" className="btn">Start Text to A-Z/0-9</Link>
                     </div>
 
                     <div className="card">
@@ -43,7 +43,7 @@ const MainPage = () => {
                             </svg>
                         </h2>
                         <p className="card-description">Convert Alphabets/Nums to Text</p>
-                        <Link to="/isl-to-text" className="btn">Start A-Z/0-9 to Text</Link>
+                        <Link to="/alnum-to-text" className="btn">Start A-Z/0-9 to Text</Link>
                     </div>
 
                     <div className="card">
@@ -59,7 +59,7 @@ const MainPage = () => {
                             </svg>
                         </h2>
                         <p className="card-description">Convert Text to ISl Image</p>
-                        <Link to="/isl-to-text" className="btn">Start Text to Word</Link>
+                        <Link to="/text-to-word" className="btn">Start Text to Word</Link>
                     </div>
 
                     <div className="card">
@@ -75,7 +75,7 @@ const MainPage = () => {
                             </svg>
                         </h2>
                         <p className="card-description">Convert ISl     Image to Text</p>
-                        <Link to="/isl-to-text" className="btn">Start Word to Text</Link>
+                        <Link to="/word-to-text" className="btn">Start Word to Text</Link>
                     </div>
 
                     <div className="card">
