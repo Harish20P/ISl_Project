@@ -1,0 +1,118 @@
+.audio-title {
+    font-size: 24px;
+    color: #ff9800;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.audio-container {
+    font-family: Arial, sans-serif;
+    background-color: rgba(76, 75, 74, 0.568);
+    color: #ffffff;
+    text-align: left;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    height: 700px;
+}
+
+.audio-display{
+    margin-left: 15px;
+}
+
+.audio-container::-webkit-scrollbar {
+    display: none;
+}
+
+.audio-display, .audio-message-output {
+    width: 100%;
+    text-align: left;
+}
+
+.output-text-content {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    display: block;
+    flex-direction: row;
+    width: 100%;
+}
+
+.audio-preview {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.video-container {
+    width: 100%;
+    text-align: left;
+
+}
+
+.upload-controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.upload-controls input[type="file"] {
+    display: none;
+}
+
+.upload-label, .process-button {
+    background-color: #ff9800;
+    color: #ffffff;
+    padding: 8px 13px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upload-label, .process-button{
+    margin: 0px !important;
+}
+
+.upload-label:hover, .process-button:hover:enabled {
+    background-color: #e68900;
+}
+
+.process-button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+.history-container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.history-entry {
+    background-color: rgba(184, 176, 176, 0.7);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.history-entry audio,
+.history-entry video {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.history-entry p {
+    background-color: #fff;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 16px;
+    overflow-wrap: break-word;
+    width: max-content;
+}

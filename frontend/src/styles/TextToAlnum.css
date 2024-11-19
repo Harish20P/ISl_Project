@@ -1,0 +1,279 @@
+.text_to_alnum-text-title {  
+    font-size: 24px;  
+    font-weight: bold;  
+    color: #FF8C00;  
+    margin-top: 60px; /* Adjusted for spacing above */  
+    text-align: center;  
+}  
+
+.text_to_alnum-container {  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    height: 700px; /* Adjusted height for better alignment */  
+    width: 1000px;   
+    position: relative;  
+}  
+
+.text_to_alnum-content {  
+    background-color: rgba(76, 75, 74, 0.568); /* Semi-transparent overlay */  
+    padding: 20px;  
+    height: 700px;  
+    width: 100%;  
+    text-align: center;  
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  
+    margin-top: 20px; /* Space above content */  
+    overflow: hidden;  
+    margin-top: -5px;
+    margin-bottom: 15px;
+}  
+
+/* Message display styling */  
+.text_to_alnum-message-display {
+    height: 630px;  /* Set a fixed height to enable scrolling */
+    overflow-y: auto;  /* Allow vertical scrolling */
+    padding: 10px;
+    margin-top: 10px;
+    scrollbar-width: none;  /* Visible scrollbar in Firefox */
+    -ms-overflow-style: auto;  /* Standard scrollbar in IE/Edge */
+    border-radius: 8px;
+} 
+
+.text_to_alnum-message-display::-webkit-scrollbar {  
+    display: none;  
+}  
+
+.text_to_alnum-message {  
+    margin: 10px 0;  
+    border-radius: 8px;  
+    max-width: max-content;
+    background-color: white;  
+    word-wrap: break-word;
+    padding: 10px;
+    font-size:2rem;  
+}  
+
+/* User message styling */  
+.text_to_alnum-user-message {  
+    color: #333;  
+    align-self: flex-end;  
+    text-align: right;  
+    margin-left: auto;  
+    width: max-content;  
+}  
+
+/* Bot message styling */  
+.text_to_alnum-bot-message {  
+    color: #333;  
+    align-self: flex-start;  
+    text-align: left;  
+    margin-right: auto;  
+    width: max-content;  
+}  
+
+/* Image output styling */  
+.text_to_alnum-image-output {  
+    width: 100%;  
+    min-width: 250px;  
+    border-radius: 5px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  
+}  
+
+/* Form styling */  
+.text_to_alnum-text-input-form {  
+    display: flex;  
+    gap: 10px;  
+    margin-top: 20px;  
+    margin-bottom: -10px;  
+    margin-left: 180px;  
+}  
+
+.text_to_alnum-text-input {  
+    padding: 8px;  
+    font-size: 16px;  
+    border: 1px solid #ccc;  
+    border-radius: 5px;  
+    outline: none;  
+    width: 600px; /* Updated for responsive styling */  
+}  
+
+.text_to_alnum-submit-button {  
+    padding-left: 8px;  
+    background-color: #FF8C00;  
+    color: white;  
+    border: none;  
+    border-radius: 5px;  
+    font-size: 16px;  
+    cursor: pointer;  
+    transition: background-color 0.3s;
+}  
+
+.text_to_alnum-submit-button:hover {  
+    background-color: #e67e22;  
+}  
+
+/* Button styling for choose and upload */  
+.text_to_alnum-choose-upload-buttons {  
+    display: flex;  
+    justify-content: center;  
+    gap: 10px;  
+    margin-top: 20px;  
+}  
+
+.text_to_alnum-choose-upload-buttons button {  
+    padding: 10px 20px;  
+    border: none;  
+    border-radius: 5px;  
+    font-size: 16px;  
+    color: white;  
+    cursor: pointer;  
+}  
+
+.text_to_alnum-choose-button {  
+    background-color: #FF8C00;  
+}  
+
+.text_to_alnum-upload-button {  
+    background-color: #888;  
+}  
+
+.text_to_alnum-choose-upload-buttons button:hover {  
+    opacity: 0.9;  
+}  
+
+@media (min-width: 1440px) {
+    .text_to_alnum-container {
+        max-width: 1400px; 
+        padding: 2rem; 
+    }
+
+    .text_to_alnum-text-title {
+        font-size: 2rem; 
+    }
+
+    .text_to_alnum-message {
+        font-size: 1.8rem;
+    }
+
+    .text_to_alnum-text-input {
+        max-width: 1000px; 
+    }
+
+    .text_to_alnum-submit-button {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .text_to_alnum-container {
+        width: 750px;
+        height: 600px;
+    }
+
+    .text_to_alnum-text-title {
+        font-size: 2rem; 
+    }
+
+    .text_to_alnum-message {
+        font-size: 1.4rem; 
+    }
+
+    .text_to_alnum-text-input {
+        width: 70%; 
+    }
+
+    .text_to_alnum-submit-button {
+        padding: 0.6rem 1rem; 
+        font-size: 1rem; 
+    }
+
+    .text_to_alnum-content{
+        height: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .text_to_alnum-container {
+        width: 95%; 
+        height: auto; 
+    }
+
+    .text_to_alnum-content {
+        padding: 1rem; 
+    }
+
+    .text_to_alnum-text-input {
+        width: 100%;
+        margin-left: -140px;
+    }
+
+    .text_to_alnum-message {
+        font-size: 1.2rem; 
+    }
+}
+
+@media (max-width: 575px) {
+    .text_to_alnum-container {
+        width: 450px;
+        height: auto; 
+    }
+
+    .text_to_alnum-text-title {
+        font-size: 1.2rem;
+        margin-top: 100px;
+    }
+
+    .text_to_alnum-content {
+        padding: 0.5rem;
+    }
+
+    .text_to_alnum-message-display {
+        height: 60vh; 
+    }
+
+    .text_to_alnum-message {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    .text_to_alnum-text-input {
+        width: 100%;
+        font-size: 0.9rem; 
+        margin-left: -120px;
+    }
+
+    .text_to_alnum-submit-button {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem; 
+    }
+
+    .text_to_alnum-choose-upload-buttons button {
+        padding: 0.5rem 1rem; 
+    }
+    .text_to_alnum-content{
+        height: 550px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text_to_alnum-container {
+        width: 100%; 
+    }
+
+    .text_to_alnum-text-title {
+        font-size: 1.5rem;
+    }
+
+    .text_to_alnum-text-input {
+        width: 100%; 
+    }
+
+    .text_to_alnum-submit-button {
+        font-size: 0.9rem; 
+        padding: 0.5rem; 
+    }
+
+    .text_to_alnum-message {
+        font-size: 1rem; 
+    }
+}

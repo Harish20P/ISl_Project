@@ -1,0 +1,114 @@
+* {  
+    margin: 0;   
+    padding: 0;  
+    box-sizing: border-box;  
+    font-family: "Bree Serif", serif;  
+    font-weight: 300;  
+    letter-spacing: 0.05em;  
+}  
+
+.app-container {  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    height: 100vh;   
+    position: relative;  
+    background-image: url(C:\Users\Admin\Downloads\ISL_CSLRT_Corpus\ISL_CSLRT_Corpus\ISl_Project\frontend\src\sources\bg.jpg);   
+    background-size: cover;   
+    background-position: center;  
+    overflow: hidden;  
+}  
+
+.content {  
+    position: relative;  
+    z-index: 1;  
+    text-align: center;  
+    padding: 20px;   
+}  
+
+p {  
+    font-size: 2rem;  
+    margin-bottom: 20px;  
+    color: #03346E;  
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.8);  
+    font-weight: 600;  
+}  
+
+.button-group {  
+    display: flex;  
+    justify-content: center;  
+    gap: 15px;  
+    flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */  
+}  
+
+.button-group button {  
+    padding: 12px 25px;   
+    border: none;  
+    border-radius: 25px;  
+    cursor: pointer;  
+    font-size: 20px;  
+    font-weight: 500;  
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;  
+    outline: none;  
+}  
+
+.login-btn {  
+    background-color: #3282B8;  
+    color: #fff;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+}  
+
+.signup-btn {  
+    background-color: #79A8A9;  
+    color: #fff;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+}  
+
+.login-btn:hover, .signup-btn:hover {  
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  
+    transform: translateY(-2px);  
+}  
+
+button:focus {  
+    outline: none;  
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);  
+}  
+
+@media (max-width: 1025px) {  
+    p {  
+        font-size: 1.8rem;  
+    }  
+
+    .button-group button {  
+        font-size: 18px;  
+        padding: 10px 20px;  
+    }  
+}  
+
+@media (max-width: 768px) {  
+    p {  
+        font-size: 1.5rem;  
+    }  
+
+    .button-group {  
+        flex-direction: column;  
+        gap: 10px;  
+    }  
+
+    .button-group button {  
+        font-size: 16px;  
+        padding: 12px 20px;  
+        width: 100%;  
+    }  
+}  
+
+@media (max-width: 480px) {  
+    p {  
+        font-size: 1.2rem;  
+    }  
+
+    .button-group button {  
+        font-size: 14px;  
+        padding: 10px 18px;  
+    }  
+}

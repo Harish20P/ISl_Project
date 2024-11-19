@@ -1,0 +1,231 @@
+.input-content {
+    text-align: center;
+}
+
+.Scroll{
+    color: #D10363;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 590px; 
+    overflow-y: auto; 
+    scrollbar-width: none; 
+}
+
+.input-container::-webkit-scrollbar {
+    display: none; 
+}
+
+.card {
+    background-color: rgba(254, 246, 236, 0.7);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 20px 40px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card-title {
+    color: #D10363;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    word-spacing: 0.05em;
+}
+
+.card-description {
+    color: #323231;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    letter-spacing: 0.08em;
+    word-spacing: 0.05em;
+}
+
+.btn {
+    background-color: #0A4D68;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    letter-spacing: 0.1em;
+    word-spacing: 0.05em;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #e00769;
+}
+
+.bi {
+    margin-right: 10px;
+    margin-bottom: -3px;
+}
+
+.bi-person-raised-hand {
+    margin-left: 5px;
+}
+
+.bi-file-earmark-font {
+    margin-left: 7px;
+}
+
+.bi-box-arrow-right {
+    margin-bottom: -6px;
+}
+
+.bi-file-earmark-person-fill {
+    margin-top: 2px;
+}
+
+.bi-house {
+    margin-bottom: -2px;
+}
+
+.bi-sort-alpha-up{
+    margin-bottom: -6.5px;
+}
+
+.bi-sort-alpha-up1{
+    margin-bottom: -6.5px;
+    margin-left: 8px;
+}
+
+.bi-images{
+    margin-left: 10px;
+}
+
+@media (min-width: 1440px) {  
+    .input-content {  
+        margin-top: 40px; 
+        width: 600px;
+        height: 600px;
+    }  
+
+    .input-container {  
+        gap: 20px; /* Reduce gap slightly */  
+    }  
+
+    .card {  
+        padding: 30px 30px 40px 30px; /* Adjust padding */  
+    }  
+
+    .card-title {  
+        font-size: 1.5rem; /* Slightly smaller card title */  
+    }  
+
+    .card-description {  
+        font-size: 1.2rem; /* Slightly smaller description */  
+    }  
+
+    .btn {  
+        font-size: 0.85rem; /* Smaller button font */  
+    }  
+}  
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .input-container {
+        gap: 15px; /* Reduce gap on larger tablets */
+    }
+
+    .card {
+        padding: 15px 30px; /* Reduced padding for larger tablets */
+    }
+
+    .card-title {
+        font-size: 1.4rem; /* Slightly smaller card title */
+    }
+
+    .card-description {
+        font-size: 1.2rem; /* Slightly smaller description */
+    }
+
+    .btn {
+        font-size: 0.85rem; /* Smaller button font */
+    }
+}
+
+@media (max-width: 992px) {
+    .input-content {
+        margin-top: 70px; /* Reduced margin for tablets */
+    }
+
+    .input-container {
+        gap: 10px; /* Further reduced gap */
+    }
+
+    .card {
+        padding: 15px; /* Further reduced padding */
+    }
+
+    .card-title {
+        font-size: 1.3rem; /* Smaller card title */
+    }
+
+    .card-description {
+        font-size: 1.1rem; /* Smaller description */
+    }
+
+    .btn {
+        padding: 8px 16px; /* Adjusted button padding */
+        font-size: 0.8rem; /* Smaller button font */
+    }
+}
+
+@media (max-width: 768px) {
+    .input-content {
+        margin-top: 50px; /* Smaller margin on mobile */
+    }
+
+    .input-container {
+        gap: 5px; /* Even smaller gap */
+    }
+
+    .card {
+        padding: 10px; /* Reduced padding more for mobile */
+    }
+
+    .card-title {
+        font-size: 1.2rem; /* Smaller font size for title */
+    }
+
+    .card-description {
+        font-size: 1rem; /* Smaller font size for description */
+    }
+
+    .btn {
+        padding: 8px 12px; /* Smaller button padding */
+        font-size: 0.75rem; /* Smaller button font */
+    }
+}
+
+@media (max-width: 426px) {
+    .input-content {
+        margin-top: 100px; /* Further reduced margin */
+    }
+
+    .card {
+        padding: 8px; /* Minimal padding for small screens */
+    }
+
+    .card-title {
+        font-size: 1rem; /* Smaller font size for title */
+    }
+
+    .card-description {
+        font-size: 0.9rem; /* Smaller font size for description */
+    }
+
+    .btn {
+        padding: 6px 10px; /* Further reduced button padding */
+        font-size: 0.7rem; /* Smaller button font */
+    }
+}

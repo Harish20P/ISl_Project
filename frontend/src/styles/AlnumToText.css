@@ -1,0 +1,121 @@
+.AlnumToText-title {
+    font-size: 24px;
+    color: #ff9800;
+    margin-top: 50px;
+}
+
+.AlnumToText-container {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: rgba(76, 75, 74, 0.568);
+    color: #ffffff;
+    text-align: center;
+    height: 73vh;
+    margin: 0 auto;
+    margin-top: -10px;
+    margin-bottom: 8px;
+    padding: 20px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    min-width: 1000px;
+}
+
+.AlnumToText-container::-webkit-scrollbar {
+    display: none;
+}
+
+.AlnumToText-uploaded-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    justify-content: flex-start;
+}
+
+.AlnumToText-image-text-container {
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: left; /* Center-align each image and text */
+    flex-basis: 48%; /* Allows two items per row */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.AlnumToText-image-preview {
+    max-width: 100%; /* Full width of container */
+    border-radius: 5px;
+    height: 100%;
+}
+
+.AlnumToText-output-text-content {
+    background-color: white !important;
+    color: #333 !important;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 25px;
+    width: max-content;
+    height: max-content;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.AlnumToText-display {
+    max-height: 650px;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.AlnumToText-text-output {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.AlnumToText-upload-controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.AlnumToText-upload-controls input[type="file"] {
+    display: none;
+}
+
+.AlnumToText-upload-label {
+    background-color: #ff9800;
+    color: #ffffff;
+    padding: 8px 13px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.AlnumToText-upload-label:hover {
+    background-color: #e68900;
+}
+
+.AlnumToText-process-button {
+    background-color: #ff9800;
+    color: #ffffff;
+    padding: 8px 13px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+}
+
+.AlnumToText-process-button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+.AlnumToText-process-button:hover:enabled {
+    background-color: #e68900;
+}

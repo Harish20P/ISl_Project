@@ -1,0 +1,228 @@
+.isltotext-video-title {
+    font-size: 24px;
+    color: #ff9800;
+    margin-top: 50px;
+}
+
+.isltotext-video-container {  
+    display: flex;  
+    flex-direction: column;  
+    font-family: Arial, sans-serif;  
+    background-color: rgba(76, 75, 74, 0.568);  
+    color: #ffffff;  
+    text-align: center;  
+    height: 700px; /* Fixed height */  
+    width: 1200px; /* Fixed width */  
+    margin: 0 auto; /* Center the container */  
+    margin-top: -10px;  
+    margin-bottom: 8px;  
+    padding: 20px;  
+    padding-bottom: 40px;
+    overflow-y: auto; /* Allow vertical scrolling */  
+    overflow-x: hidden; /* Prevent horizontal scrolling only */  
+}
+
+.isltotext-video-container::-webkit-scrollbar {
+    display: none;
+}
+
+.isltotext-video-display {  
+    max-height: 400px; /* Set a max height for the video */  
+    border-radius: 5px;  
+    padding: 10px;  
+    width: 100%; /* Ensure video display takes full width of container */  
+}  
+
+.isltotext-video-preview {  
+    max-width: 40%;  
+    border-radius: 5px;  
+    height: auto; /* Maintain aspect ratio */  
+} 
+
+.isltotext-output-text-content {  
+    background-color: white;  
+    color: #333;  
+    padding: 10px;  
+    border-radius: 5px;  
+    font-size: 16px;  
+    overflow-wrap: break-word;  
+    width: max-content; /* Ensure full width */  
+} 
+
+.isltotext-output-text-content {
+    background-color: white;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    overflow-wrap: break-word;
+}
+
+.isltotext-upload-controls {  
+    display: flex;  
+    flex-direction: row;  
+    align-items: center;  
+    gap: 10px;  
+    justify-content: center;  
+} 
+
+.isltotext-upload-controls input[type="file"] {  
+    display: none;  
+}  
+
+.isltotext-upload-label {  
+    background-color: #ff9800;  
+    color: #ffffff;  
+    padding: 8px 13px;  
+    border-radius: 5px;  
+    cursor: pointer;  
+    transition: background-color 0.3s;  
+}  
+
+.isltotext-upload-label:hover {  
+    background-color: #e68900;  
+}  
+
+.isltotext-process-button {  
+    background-color: #ff9800;  
+    color: #ffffff;  
+    padding: 8px 13px;  
+    border: none;  
+    border-radius: 5px;  
+    cursor: pointer;  
+    transition: background-color 0.3s;  
+    font-size: 1rem;  
+}  
+
+.isltotext-process-button:disabled {  
+    background-color: #aaa;  
+    cursor: not-allowed;  
+}  
+
+.isltotext-process-button:hover:enabled {  
+    background-color: #e68900;  
+}  
+
+/* Responsive Styles */  
+@media (max-width: 1440px) {  
+    .isltotext-video-title {  
+        font-size: 23px;  
+        margin-top: 75px;  
+        margin-bottom: 25px;  
+    }  
+
+    .isltotext-video-container {  
+        /* Maintain fixed dimensions */  
+        height: 600px;   
+        width: 800px; /* Fixed width */  
+        padding: 15px;  
+        margin-bottom: 20px;  
+    }  
+
+    .isltotext-video-display {  
+        width: 95%; /* Keep the video display responsive */  
+    }  
+
+    .isltotext-upload-controls {  
+        gap: 20px;  
+    }  
+
+    .isltotext-process-button,  
+    .isltotext-upload-label {  
+        width: 20%;  
+        text-align: center;  
+    }  
+}  
+
+@media (max-width: 1024px) {
+    .isltotext-video-title {
+        font-size: 22px;
+        margin-top: 70px;
+    }
+
+    .isltotext-video-container {
+        min-width: 750px;
+        height: 70vh;
+    }
+
+    .isltotext-video-display {
+        width: 90%;
+    }
+
+    .isltotext-upload-controls {
+        gap: 15px;
+    }
+
+    .isltotext-process-button,
+    .isltotext-upload-label {
+        width: 25%;
+    }
+}
+
+@media (max-width: 768px) {  
+    .isltotext-video-title {  
+        font-size: 20px;  
+        margin-top: 50px;  
+    }  
+
+    .isltotext-video-container {  
+        width: 600px; /* Adjusted for medium screens */  
+        height: 60vh;  
+        padding: 10px;  
+    }  
+
+    .isltotext-video-display {  
+        width: 100%;  
+    }  
+
+    .isltotext-upload-controls {  
+        flex-direction: column;  
+        align-items: center;  
+    }  
+
+    .isltotext-process-button,  
+    .isltotext-upload-label {  
+        width: 100%;  
+        text-align: center;  
+    }  
+}  
+
+@media (max-width: 575px) {  
+    .isltotext-video-title {  
+        font-size: 18px;  
+        margin-top: 40px;  
+    }  
+
+    .isltotext-video-container {  
+        width: 100%; /* Full width for smaller screens */  
+        height: 55vh;  
+    }  
+
+    .isltotext-process-button {  
+        padding: 8px 10px;  
+    }  
+
+    .isltotext-upload-label {  
+        padding: 6px 10px;  
+    }  
+}  
+
+@media (max-width: 480px) {  
+    .isltotext-video-title {  
+        font-size: 16px;  
+        margin-top: 30px;  
+    }  
+
+    .isltotext-video-container {  
+        width: 100%; /* Full width for smaller screens */  
+        height: 50vh;  
+    }  
+
+    .isltotext-process-button {  
+        padding: 8px 10px;  
+    }  
+
+    .isltotext-upload-label {  
+        padding: 6px 10px;  
+    }  
+}  
